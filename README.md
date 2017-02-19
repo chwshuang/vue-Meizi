@@ -4,6 +4,8 @@
 
 ###首先
 
+增加了电影 movie页面
+
 ***
 >*  感谢[gank.io](http://gank.io/)提供的api接口
 
