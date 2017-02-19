@@ -39,7 +39,7 @@ const routerApp = new Vue({
  *
  *
  */
-if (!loadFromlLocal('gank', 'wecome', false)) {
-  router.push('/wecome');
+if (!loadFromlLocal('gank', 'movie', false)) {
+  router.push('/movie');
 }
 export default routerApp;

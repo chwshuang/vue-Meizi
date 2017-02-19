@@ -56,15 +56,23 @@ const routers = [{
           resolve(require('./components/lists/web.vue'));
         });
       }
+    }, {
+      path: '/movie',
+      name: 'movie',
+      component(resolve) {
+        require.ensure(['./components/lists/movie.vue'], () => {
+          resolve(require('./components/lists/movie.vue'));
+        });
+      }
     }
   ]
 },
   {
-    path: '/wecome',
-    name: 'wecome',
+    path: '*',
+    name: 'web',
     component(resolve) {
-      require.ensure(['./components/wecome/wecome.vue'], () => {
-        resolve(require('./components/wecome/wecome.vue'));
+      require.ensure(['./components/lists/web.vue'], () => {
+        resolve(require('./components/lists/web.vue'));
       });
     }
   }];

@@ -3,6 +3,7 @@
  <v-header></v-header>
   <loading :show="loadingShow"></loading>
   <router-view></router-view>
+  <!--<v-list :type="'前端'"></v-list>-->
 </div>
 </template>
 
@@ -11,12 +12,14 @@
   import vHeader from './components/header/header.vue';
   import loading from './components/loading/loading.vue';
   import { mapState } from 'vuex';
+  import vList from './components/lists/list.vue';
   export default {
     name: 'app',
     components: {
       vMenu,
       vHeader,
-      loading
+      loading,
+      vList
     },
     data() {
       return {
@@ -69,4 +72,7 @@
     height: 100%;
     background: red;
   }
+</style>
+
+<style lang="stylus" rel="stylesheet/stylus">
 </style>
