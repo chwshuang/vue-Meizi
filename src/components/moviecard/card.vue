@@ -13,17 +13,19 @@
   <!--</div>-->
   <div class="card">
     <span class="info">
-      <em>8.9</em>
+      <em>{{data.scope}}</em>
+      <!--<a class="btn-trans" data-evt="index/movieBuy/9" href="?tmp=showcinemas&amp;movieid=336923">预告</a>-->
     </span>
     <a class="item ma-no" href="/movie/78608?_v_=yes" data-evt="index/moviehotList/4">
-      <img class="J_ImgLoad" width="61" height="84" src="//p0.meituan.net/165.220/movie/e631df85c6cadddafc6792cd94fd14ad6081426.jpeg.webp">
+      <img class="J_ImgLoad" width="61" height="84" v-bind:src="data.logo">
       <div class="cont">
         <h4>
-          <span>刺客信条</span>
-          <span class="movie-tag">3D IMAX</span>
+          <span>{{data.title}}</span>
+          <span class="movie-tag">{{data.type}}</span>
         </h4>
-        <p class="desc">穿越黑科技，法鲨炫腹肌</p>
-        <p class="status">本周五上映</p>
+        <p class="desc">{{data.desc}}</p>
+        <p class="status">{{data.country}}</p>
+        <p class="status">{{data.release}}</p>
       </div>
     </a>
   </div>
@@ -44,6 +46,7 @@
 <!--</style>-->
 <style>
   .card {
+    min-width: 320px;
     display: list-item;
     text-align: -webkit-match-parent;
   }
@@ -67,8 +70,9 @@
   }
   .card .item {
     display: block;
-    padding: 10px 10px 12px;
+    padding: 8px 10px 4px;
     border-bottom: 1px solid #d6d6d6;
+    min-height: 90px;
   }
   a {
     outline: 0;
@@ -108,7 +112,7 @@
   .card h4 {
     padding: 0px;
     font-size: 16px;
-    padding: 4px 0 7px;
+    padding: 2px 0 4px;
     color: #000;
     max-height: 45px;
     overflow: hidden;
@@ -139,7 +143,7 @@
     height: 14px;
   }
   .card .cont p {
-    padding: 3px 0;
+    padding: 1px 0;
     margin: 0px;
     color: #666;
     overflow: hidden;
@@ -156,14 +160,15 @@
     -webkit-margin-end: 0px;
   }
   .card .status {
-    font-size: 12px;
-    padding: 3px 0;
+    font-size: 10px;
+    padding-top: 2px;
   }
   .desc {
-    margin: 0;
+    margin: 0 0 2px 0;
     padding: 0;
     color: #666;
-    height: 21px;
+    height: 16px;
+    font-size: 14px;
   }
   a:link,a:visited{
     text-decoration:none;  /*超链接无下划线*/
@@ -172,5 +177,18 @@
     content: '分';
     font-size: 12px;
     padding-left: 2px;
+  }
+  .btn-trans {
+    font-size: 13px;
+    padding: 4px 17px;
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid #e54847;
+    color: #e54847 !important;
+
+    display: inline-block;
+    vertical-align: top;
+    white-space: nowrap;
+    margin-top: 20px;
   }
 </style>

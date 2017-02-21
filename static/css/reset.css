@@ -92,11 +92,11 @@ body {
 }
  @media screen and (min-width: 680px) {
     body {
-      width: 680px;
+      width: 100%;
       position: relative;
       margin: 0 auto;
     }
-    
+
     #app {
       width: 680px;
     }
@@ -105,5 +105,5 @@ body {
       margin: 0 auto;
     }
 
-    
+
   }
